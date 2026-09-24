@@ -1,0 +1,12 @@
+[submodule "fastfood-registry-ms"]
+	path = fastfood-registry-ms
+	url = https://github.com/isaacsilvatech/fastfood-registry-ms.git
+[submodule "fastfood-gateway-ms"]
+	path = fastfood-gateway-ms
+	url = https://github.com/isaacsilvatech/fastfood-gateway-ms.git
+[submodule "fastfood-pagamentos-ms"]
+	path = fastfood-pagamentos-ms
+	url = https://github.com/isaacsilvatech/fastfood-pagamentos-ms.git
+[submodule "fastfood-pedidos-ms"]
+	path = fastfood-pedidos-ms
+	url = https://github.com/isaacsilvatech/fastfood-pedidos-ms.git
