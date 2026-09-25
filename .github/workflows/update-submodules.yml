@@ -35,5 +35,5 @@ jobs:
           fi
 
           git add -- .
-          git commit -m "chore: atualiza referências dos submodules"
+          git commit -m "chore: atualiza referencias dos submodules"
           git push origin HEAD:${{ github.event.repository.default_branch }}
