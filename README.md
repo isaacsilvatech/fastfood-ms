@@ -6,5 +6,3 @@
  - fastfood-pedidos-ms
  
 Desenvolvido com: **Spring Boot**
-
-_Feito sem IA!!!_
