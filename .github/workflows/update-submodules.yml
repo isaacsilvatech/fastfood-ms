@@ -1,0 +1,39 @@
+
+name: Update Submodules
+
+on:
+  repository_dispatch:
+    types: [submodule_updated]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout principal
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Atualizar todos os submodules
+        run: |
+          git submodule update --init --remote --recursive
+
+      - name: Commit e push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "Nenhum submodule precisa ser atualizado."
+            exit 0
+          fi
+
+          git add -- .
+          git commit -m "chore: atualiza referências dos submodules"
+          git push origin HEAD:${{ github.event.repository.default_branch }}
